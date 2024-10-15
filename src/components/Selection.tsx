@@ -1,13 +1,18 @@
-import  { useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 interface labels{
     heading:string,
     bt1:string,
-    bt2:string
+    bt2:string,
+    sendData: (ratioValue:string) => void
 }
 
-export function Selection({heading,bt1,bt2}:labels) {
+export function Selection({heading,bt1,bt2,sendData}:labels) {
     const [activeButton, setActiveButton] = useState<string>("");
+
+    useEffect(()=>{
+        sendData(activeButton);
+    },[sendData,activeButton]);
 
     return (
         <div className="mx-3">
