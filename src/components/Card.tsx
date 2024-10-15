@@ -57,10 +57,10 @@ export const Card: React.FC = () => {
         }`}
       >
         <div>
-          <h2 className="text-2xl p-1 font-bold text-center">
+          <h1 className="text-6xl p-1 font-bold text-center">Vizura.ai</h1>
+          <p className="text-md text-center font-semibold">
             Text to Video Generator
-          </h2>
-          <p>Enter the prompt to generate the video</p>
+          </p>
           <Prompt sendPromptToParent={receivedPrompt} />
           <Selection
             heading={"Ratio"}

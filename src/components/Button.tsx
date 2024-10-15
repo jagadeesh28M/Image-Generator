@@ -10,13 +10,13 @@ export const Button = ({
   return (
     <button
       onClick={onClick}
-      className="w-full invert hover:rotate-2 brightness-150 dark:brightness-100 group hover:shadow-lg hover:shadow-yellow-700/60 transition ease-in-out hover:scale-105 p-1 mt-2 rounded-2xl bg-gradient-to-br from-yellow-800 via-yellow-600 to-yellow-800 hover:from-yellow-700 hover:via-yellow-800 hover:to-yellow-600"
+      className="w-full invert hover:rotate-2 brightness-150 dark:brightness-100 group hover:shadow-lg hover:shadow-cyan-700/60 transition ease-in-out hover:scale-105 p-1 mt-2 rounded-2xl bg-gradient-to-br from-cyan-800 via-cyan-600 to-cyan-800 hover:from-cyan-700 hover:via-cyan-800 hover:to-cyan-600"
     >
       <div className="flex items-center justify-center px-6 py-2 backdrop-blur-xl bg-black/80 rounded-xl font-semibold w-full h-full">
         {loading ? (
           <div className="flex items-center gap-2">
             <svg
-              className="animate-spin w-6 h-6 text-yellow-600"
+              className="animate-spin w-6 h-6 text-cyan-400"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -38,13 +38,13 @@ export const Button = ({
             Generating...
           </div>
         ) : (
-          <div className="group-hover:scale-100 flex items-center group-hover:text-yellow-500 text-yellow-600 gap-2">
+          <div className="group-hover:scale-100 flex items-center group-hover:text-cyan-500 text-cyan-400 gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.8"
-              className="w-6 h-6 stroke-yellow-600 group-hover:stroke-yellow-500"
+              className="w-6 h-6 stroke-cyan-600 group-hover:stroke-cyan-500"
             >
               <path
                 strokeLinecap="round"
