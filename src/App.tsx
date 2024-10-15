@@ -1,6 +1,7 @@
 import Bg from "./components/Bg";
 import { Github } from "./components/Github";
 import { Card } from "./components/Card";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Card />
       <div className="absolute bottom-4 right-4">
         <Github />
+        <Analytics />
       </div>
     </div>
   );
