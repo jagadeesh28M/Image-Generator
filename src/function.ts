@@ -49,7 +49,6 @@ export const imgReq = async (
   };
   try {
     const response = await axios.request(options);
-    console.log(response.data);
     const uuid = response.data.uuid;
 
     const img = {
@@ -67,8 +66,6 @@ export const imgReq = async (
     while (!url) {
       try {
         const statusResponse = await axios.request(img);
-        console.log(statusResponse.data);
-
         if (
           statusResponse.data.status === "success" &&
           statusResponse.data.url
@@ -94,7 +91,6 @@ export const imgReq = async (
         return;
       }
     }
-    console.log(url);
     return;
   } catch (error) {
     alert("Error While Fetching Data");
