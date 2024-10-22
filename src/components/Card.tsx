@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Button } from "./Button";
 import { Prompt } from "./Prompt";
 import { Selection } from "./Selection";
@@ -31,12 +31,11 @@ export const Card: React.FC = () => {
     setLoading(false);
   };
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     if (!parentPrompt || !parentRatio || !parentDuration) {
       setAlertMessage(true);
       return;
     }
-
     setAlertMessage(false);
     setLoading(true);
     imgReq(
@@ -47,7 +46,7 @@ export const Card: React.FC = () => {
       },
       receivedUrl
     );
-  };
+  }, [parentPrompt, parentRatio, parentDuration]);
 
   return (
     <div className="h-auto w-auto border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[#d4191c] to-[rgba(0,0,0,0.01)] text-white  p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px]">
